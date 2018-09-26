@@ -1,4 +1,5 @@
-FROM nnet3-hunlianliau
+ARG KUI=205
+FROM nnet3-hunlianliau:${KUI}
 MAINTAINER sih4sing5hong5
 
 
