@@ -19,3 +19,4 @@ RUN wget https://github.com/sih4sing5hong5/kaldi/raw/taiwanese/egs/taiwanese/s5c
 
 CMD bash -x decode_nnet3.sh exp/chain/tdnn_1a_sp/graph_test/ exp/chain/tdnn_1a_sp/lang-3grams/ tshi3/train_free exp/chain/tdnn_1a_sp/decode_tshi
 
+rm -rf /usr/local/pian7sik4_gi2liau7/
