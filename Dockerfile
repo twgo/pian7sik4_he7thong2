@@ -11,7 +11,8 @@ RUN gzip bun1.arpa && gzip bun3.arpa
 RUN mkdir -p hethong/dict
 RUN cp -r data/local/dict/[^l]* hethong/dict
 COPY lexicon.txt lexicon.txt
-RUN cat lexicon.txt ka.txt | sort -u | sed '/^\s*$/d' > hethong/dict/lexicon.txt
+COPY 7-11.txt 7-11.txt
+RUN cat lexicon.txt ka.txt 7-11.txt | sort -u | sed '/^\s*$/d' > hethong/dict/lexicon.txt
 RUN utils/prepare_lang.sh hethong/dict "<UNK>" hethong/local/lang_log hethong/lang_dict
 RUN utils/format_lm.sh hethong/lang_dict bun1.arpa.gz hethong/dict/lexicon.txt hethong/lang
 RUN utils/build_const_arpa_lm.sh bun3.arpa.gz hethong/lang exp/chain/tdnn_1a_sp/lang-3grams
